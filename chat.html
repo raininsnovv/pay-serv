@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 430px;
+        height: 932px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        padding: 10px 15px;
+        background-color: #70bdc2;
+        color: white;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+      }
+      .header img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .header-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .header-info p {
+        margin: 0;
+        font-size: 14px;
+        color: white;
+      }
+      .header-info .status {
+        color: #d4d4d4;
+      }
+      .details {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        background-color: #a5bbb09f;
+        color: black;
+        border-bottom: 1px solid #ccc;
+      }
+      .content {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 20px;
+        padding-top: 0;
+        background-color: #e9f0f4;
+      }
+      .message {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .message.sent {
+        align-items: flex-end;
+      }
+      .message.received {
+        align-items: flex-start;
+      }
+      .message p {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 60%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .message.sent p {
+        background-color: #dcf8c6;
+      }
+      .message.received p {
+        background-color: #ffffff;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #70bdc2;
+        border-top: 1px solid #ccc;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .footer img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .footer input {
+        flex-grow: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://img.icons8.com/ios-filled/50/ffffff/user.png"
+          alt="User"
+        />
+        <div class="header-info">
+          <p>Шишков А.В.</p>
+          <p class="status">В сети</p>
+        </div>
+        <img
+          src="https://img.icons8.com/ios-filled/50/ffffff/back.png"
+          alt="Back"
+          onclick="location.href='index.html'"
+        />
+      </div>
+      <div class="details">
+        <p>20,000 Р.</p>
+        <p>5%</p>
+        <p>Швеция</p>
+      </div>
+      <div class="content">
+        <div class="message received">
+          <p>Добрый день! Готов сделать перевод под 6%!</p>
+          <span>12:45</span>
+        </div>
+        <div class="message sent">
+          <p>Добрый день! Я согласен.</p>
+          <span>12:48</span>
+        </div>
+      </div>
+      <div class="footer">
+        <img
+          src="https://img.icons8.com/ios-filled/50/ffffff/attach.png"
+          alt="Attach"
+        />
+        <input type="text" placeholder="Написать сообщение" />
+        <img
+          src="https://img.icons8.com/ios-filled/50/ffffff/send.png"
+          alt="Send"
+        />
+      </div>
+    </div>
+  </body>
+</html>
